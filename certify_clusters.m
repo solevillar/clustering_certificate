@@ -1,4 +1,4 @@
-% Author:       Soledad Villar
+% Author:       Iguchi, Mixon, Peterson, Villar
 % Filename:     certify_clusters.m
 % Last edited:  14 May 2016
 % Description:  This function provides a certificate of optimality for a 
@@ -47,16 +47,6 @@ N       =sum(nvector);
 if n~=N
     disp('Error: the number of columns in Phi must coincide with the sum of the entries of nvector');
 end
-%Phi     =zeros(M,N);
-%temp    =0;
-
-% for i=1:length(nvector);
-%     ball                            =normc(randn(M,nvector(i)));
-%     d                               =diag(rand(nvector(i),1).^(1/M));
-%     ball                            =ball*d + c(:,i) * ones(1,length(d)) ;
-%     Phi(:,temp+1:temp+nvector(i))   =ball;
-%     temp                            =temp+nvector(i);
-% end
 
 % create_dist_matrix--------------
 D=zeros(N);
