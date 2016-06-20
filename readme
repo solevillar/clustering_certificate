@@ -1,0 +1,26 @@
+Probably certifiably correct kmeans clustering
+*****
+Authors: Takayuki Iguchi, Dustin G. Mixon, Jesse Peterson, and Soledad Villar.
+contact: mvillar@math.utexas.edu
+*****
+This code contains the algorithms described in [1]. In particular the function
+certify_clusters receives a set of clusters as input and constructs the dual 
+certification described in [1]. If the certification succeeds it means that it
+constructed a proof of the clustering’s optimality, and the algorithm returns 1.
+
+See certify_clusters.m description for more information.
+
+*****
+Example
+>> Phi= horzcat(rand(2,10), rand(2,11)+2*ones(2,11), rand(2,8)-2*ones(2,8));
+>> certify_clusters(Phi, [10,11,8])
+ans=1 
+
+>> Phi2= horzcat(randn(2,10), randn(2,11)+2*ones(2,11), randn(2,8)-2*ones(2,8));
+>> certify_clusters(Phi, [10,11,8])
+ans=0
+*****
+
+ References:
+[1] Iguchi, Mixon, Peterson, Villar. Probably certifiably correct kmeans 
+clustering.
